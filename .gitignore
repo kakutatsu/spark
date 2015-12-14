@@ -1,0 +1,11 @@
+devJava8/target
+devScala/project/target
+devScala/project/project/target
+devScala/target
+devScala/src/main/scala/learnScala
+devScala/out
+.history
+devScala/.idea/artifacts
+devJava8/.idea/libraries
+devScala/.idea
+devJava8/.idea

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_2 http://www.dmg.org/v4-2/pmml-4-2.xsd">
+ <Header copyright="Copyright (c) 2015 canergocmen" description="Linear Regression Model">
+  <Extension name="user" value="canergocmen" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2015-10-22 18:47:12</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="5">
+  <DataField name="Sepal.Length" optype="continuous" dataType="double"/>
+  <DataField name="Sepal.Width" optype="continuous" dataType="double"/>
+  <DataField name="Petal.Length" optype="continuous" dataType="double"/>
+  <DataField name="Petal.Width" optype="continuous" dataType="double"/>
+  <DataField name="Species" optype="categorical" dataType="string">
+   <Value value="setosa"/>
+   <Value value="versicolor"/>
+   <Value value="virginica"/>
+  </DataField>
+ </DataDictionary>
+ <RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares">
+  <MiningSchema>
+   <MiningField name="Sepal.Length" usageType="predicted"/>
+   <MiningField name="Sepal.Width" usageType="active"/>
+   <MiningField name="Petal.Length" usageType="active"/>
+   <MiningField name="Petal.Width" usageType="active"/>
+   <MiningField name="Species" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_Sepal.Length" feature="predictedValue"/>
+  </Output>
+  <RegressionTable intercept="2.17126629215507">
+   <NumericPredictor name="Sepal.Width" exponent="1" coefficient="0.495888938388551"/>
+   <NumericPredictor name="Petal.Length" exponent="1" coefficient="0.829243912234806"/>
+   <NumericPredictor name="Petal.Width" exponent="1" coefficient="-0.315155173326474"/>
+   <CategoricalPredictor name="Species" value="setosa" coefficient="0"/>
+   <CategoricalPredictor name="Species" value="versicolor" coefficient="-0.723561957780729"/>
+   <CategoricalPredictor name="Species" value="virginica" coefficient="-1.02349781449083"/>
+  </RegressionTable>
+ </RegressionModel>
+</PMML>
